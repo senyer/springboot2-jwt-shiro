@@ -1,0 +1,5 @@
+spring:
+  #多文件配置
+  profiles:
+     #active: prod    # 可以通过逗号分离，配置n个配置文件，但是必须是application-xxx的格式
+      active: dev    # 可以通过逗号分离，配置n个配置文件，但是必须是application-xxx的格式

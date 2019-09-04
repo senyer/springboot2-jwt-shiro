@@ -1,0 +1,32 @@
+#自定义日志保存路径
+logback:
+    logdir: D:/egb-waterlock/log
+    appname: sen
+
+#mybatis-plus相关配置
+mybatis-plus:
+    mapper-locations: classpath*:mappers/*/*.xml
+
+
+#多数据源配置      
+spring:
+  datasource:
+    dynamic:
+      primary: local #设置默认的数据源或者数据源组,默认值即为master
+      datasource:
+        local:
+          username: sa
+          password: 123456
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+          url: jdbc:sqlserver://192.168.100.170;DatabaseName=water_lock
+        iot:
+          username: sa
+          password: c4FZy63120760jqT
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+          url: jdbc:sqlserver://192.168.100.15;DatabaseName=ZY_Server_Web_v3
+        egb:
+          username: sa
+          password: c4FZy63120760jqT
+          driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+          url: jdbc:sqlserver://192.168.100.15;DatabaseName=zxtTWS
+   

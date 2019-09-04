@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zygk.web.domain.local.persistence.UserinfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.zygk.web.domain.local.entity.Userinfo">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="password" property="password" />
+        <result column="username" property="username" />
+        <result column="status" property="status" />
+        <result column="egb_user_key" property="egbUserKey" />
+        <result column="iot_user_key" property="iotUserKey" />
+        <result column="avatar" property="avatar" />
+        <result column="tele" property="tele" />
+        <result column="salt" property="salt" />
+        <result column="del_flag" property="delFlag" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, login_name, password, username, status, egb_user_key, iot_user_key, avatar, tele, salt, del_flag
+    </sql>
+
+</mapper>
